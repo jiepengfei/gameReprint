@@ -1,6 +1,9 @@
+import Core from './2048/core';
 import logo from './logo.svg';
 import './App.css';
 
+const test = new Core();
+console.log(test);
 function App() {
   return (
     <div className="App">
