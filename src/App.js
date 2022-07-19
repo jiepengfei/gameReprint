@@ -1,28 +1,29 @@
+import React, { Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import routes from './router';
 import Core from './2048/core';
-import logo from './logo.svg';
-import './App.css';
 
 const test = new Core();
-console.log(test);
+const inputTest = document.createElement('input');
+inputTest.style.width = '100px';
+document.body.append(inputTest);
+inputTest.onkeydown = (e) => {
+  test.onMove(e);
+};
+
+const list = routes.map((obj) => {
+  const { path, component } = obj;
+  return <Route key={path} path={path} component={component} />;
+});
+console.log(list);
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <Router>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Routes>
+        {list}
+      </Routes>
+    </Suspense>
+  </Router>
 }
 
 export default App;
