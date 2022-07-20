@@ -68,3 +68,35 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## 项目文件目录
+
+```
+gameReprint
+│   README.md
+│   package.json
+│   ...
+└───src
+│   │   App.jsx
+│   │   index.jsx
+│   └───ajax  // axios封装 暂无
+│   │
+│   └───components // 公共业务组件
+│   │
+│   └───images // 静态图片目录
+│   │
+│   └───router // 路由配置 暂无
+│   │
+│   └───store // redux相关 暂无
+│   │
+│   └───view // 页面
+│
+└───public  // 入口文件
+│      index.html
+│      favicon.ico
+│      ...
+└───dist  // 打包生成地址
+|
+|____node_modules  依赖包
+
+```
