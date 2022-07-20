@@ -1,0 +1,12 @@
+#index {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 5vh;
+  left: 40vh;
+  min-width: 20vh;
+  min-height: 40vh;
+  background: skyblue;
+}

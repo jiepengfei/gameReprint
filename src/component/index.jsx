@@ -1,8 +1,11 @@
 import React from 'react';
+import './index.css'
 
 export default function Index() {
-  return <div>
-    Hello, index
-    <a href="./test">to Test</a>
-  </div>;
+  return (
+    <div id="index">
+      <a href="/test">toTest</a>
+      <a href="./2048">2048</a>
+    </div>
+  );
 }
