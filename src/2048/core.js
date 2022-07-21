@@ -60,12 +60,16 @@ export default class Core {
 
   // 创建页面元素,存放入eleArr
   #createElementArr = () => {
+    const container = document.querySelector('.container');
+    container.addEventListener('keyup', (e) => {
+      this.onMove(e);
+    })
     for (let i = 0; i < 4; i++) {
       for (let j = 0; j < 4; j++) {
         const div = document.createElement('div');
-        div.style.width = '20px';
-        div.style.height = '20px';
-        // body.append(div);
+        div.style.width = '50px';
+        div.style.height = '50px';
+        container.append(div);
         this.#eleArr[i][j] = div;
       }
     }

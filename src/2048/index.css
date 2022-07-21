@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 50px auto;
+  width: 225px;
+  height: 225px;
+  border: 1px solid skyblue;
+  /* background: skyblue; */
+}
