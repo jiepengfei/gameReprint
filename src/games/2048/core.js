@@ -61,12 +61,13 @@ export default class Core {
   // 创建页面元素,存放入eleArr
   #createElementArr = () => {
     const container = document.querySelector('.container');
-    container.addEventListener('keyup', (e) => {
+    document.addEventListener('keyup', (e) => {
       this.onMove(e);
     })
     for (let i = 0; i < 4; i++) {
       for (let j = 0; j < 4; j++) {
         const div = document.createElement('div');
+        div.className = 'ele_2048';
         div.style.width = '50px';
         div.style.height = '50px';
         container.append(div);
@@ -222,7 +223,9 @@ export default class Core {
   #displayOnScreen = () => {
     for (let i = 0; i < 4; i++) {
       for (let j = 0; j < 4; j++) {
-        this.#eleArr[i][j].innerText = this.#map[i][j];
+        const value = this.#map[i][j];
+        this.#eleArr[i][j].innerText = value;
+        this.#eleArr[i][j].style.background = this.#colorMap[value];
       }
     }
   };
@@ -231,7 +234,6 @@ export default class Core {
   #onNext = () => {
     this.#compteEmptyPos();
     this.#randomNewNum();
-    console.log(this.#map);
     // console.log(this.#score);
     this.#displayOnScreen();
   };

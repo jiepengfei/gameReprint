@@ -12,7 +12,7 @@ function InputTest() {
     //   test.onMove(e);
     // };
   }, [])
-  return <div className='container' tabIndex={1}></div>
+  return <div className='container'></div>
 }
 
 export default InputTest;
