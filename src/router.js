@@ -1,7 +1,8 @@
-import Index from './component/index';
-import Test from './component/test';
+import Index from './games/index/index';
+import Test from './games/index/test';
+import InputTest from './games/2048';
 
-const routes = [
+const routeList = [
   {
     path: '/',
     component: Index,
@@ -10,6 +11,10 @@ const routes = [
     path: '/Test',
     component: Test,
   },
+  {
+    path: '/2048',
+    component: InputTest,
+  },
 ];
 
-export default routes;
+export default routeList;
