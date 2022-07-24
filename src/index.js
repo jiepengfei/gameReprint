@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// TODO: README修改
+// TODO: 2048样式
+// TODO: eslint配置
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // 严格模式下useEffect会执行两次
