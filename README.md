@@ -1,3 +1,13 @@
+# 经典小游戏复刻
+
+如果你是想玩一玩这些小游戏，可以在clone项目后运行npm start或yarn start命令；
+或者在对应游戏目录下使用浏览器打开游戏名.html文件。
+
+如果你是想参与开发或是有什么好的建议，欢迎提issues或pr。
+这个项目没有兼容性的考虑，你可以使用class组件，也可以使用hooks。
+你也可以使用ES2022语法，或是最新的CSS特性。
+使用Class实现面向对象风格或是使用函数式风格都是可以的。
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -77,19 +87,19 @@ gameReprint
 │   package.json
 │   ...
 └───src
-│   │   App.jsx
-│   │   index.jsx
+│   │   App.js // 入口文件
+│   │   index.js // 入口文件
 │   └───ajax  // axios封装 暂无
 │   │
-│   └───components // 公共业务组件
+│   └───games // 存放游戏
+|           └─── index // 首页/游戏入口
+|           └─── gameName/gameName.html // 可直接打开的对应的游戏html文件
 │   │
 │   └───images // 静态图片目录
 │   │
-│   └───router // 路由配置 暂无
+│   └───router.js // 路由配置文件
 │   │
 │   └───store // redux相关 暂无
-│   │
-│   └───view // 页面
 │
 └───public  // 入口文件
 │      index.html
