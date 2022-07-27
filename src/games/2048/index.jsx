@@ -12,7 +12,21 @@ function InputTest() {
     //   test.onMove(e);
     // };
   }, [])
-  return <div className='container'></div>
+  return (
+    <div className='main'>
+      <div className='head'>
+        <div className='backToMenu'></div>
+        <div className='refresh'></div>
+        <div className='currentScore'></div>
+        <div className='bestScore'></div>
+      </div>
+      <div className='container'></div>
+      <div>
+        <div className='moveCount'></div>
+        <div className='currentTime'></div>
+      </div>
+    </div>
+  )
 }
 
 export default InputTest;

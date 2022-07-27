@@ -118,7 +118,7 @@ export default class Core {
     for (let i = 0; i < this.#mergeArray.length - 1; i++) {
       if (this.#mergeArray[i] !== 0 && this.#mergeArray[i] === this.#mergeArray[i + 1]) {
         this.#mergeArray[i] *= 2;
-        this.#score += this.#mergeArray[i] * this.#mergeArray[i];
+        this.#score += this.#mergeArray[i];
         this.#mergeArray[i + 1] = 0;
       }
     }
