@@ -58,7 +58,6 @@ export default class Core {
     this.#onNext();
   }
 
-  // 创建页面元素,存放入eleArr
   #createElementArr = () => {
     const container = document.querySelector('.container');
     document.addEventListener('keyup', (e) => {
@@ -68,8 +67,8 @@ export default class Core {
       for (let j = 0; j < 4; j++) {
         const div = document.createElement('div');
         div.className = 'ele_2048';
-        div.style.width = '50px';
-        div.style.height = '50px';
+        // div.style.width = '50px';
+        // div.style.height = '50px';
         container.append(div);
         this.#eleArr[i][j] = div;
       }
@@ -112,7 +111,6 @@ export default class Core {
     this.#compteEmptyPos();
   };
 
-  // 合并
   #merge = () => {
     this.#removeZero();
     for (let i = 0; i < this.#mergeArray.length - 1; i++) {
@@ -219,7 +217,6 @@ export default class Core {
     this.#map[randomPos[0]][randomPos[1]] = newNum;
   };
 
-  // 在屏幕显示
   #displayOnScreen = () => {
     for (let i = 0; i < 4; i++) {
       for (let j = 0; j < 4; j++) {
@@ -230,7 +227,6 @@ export default class Core {
     }
   };
 
-  // map发生变化后的流程
   #onNext = () => {
     this.#compteEmptyPos();
     this.#randomNewNum();

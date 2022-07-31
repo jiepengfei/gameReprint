@@ -15,13 +15,17 @@ function InputTest() {
   return (
     <div className='main'>
       <div className='head'>
-        <div className='backToMenu'></div>
-        <div className='refresh'></div>
-        <div className='currentScore'></div>
-        <div className='bestScore'></div>
+        <div className='button'>
+          <span className='backToMenu'>&lt;</span>
+          <span className='refresh'>○</span>
+        </div>
+        <div className='score'>
+          <div className='currentScore'></div>
+          <div className='bestScore'></div>
+        </div>
       </div>
       <div className='container'></div>
-      <div>
+      <div className='bottom'>
         <div className='moveCount'></div>
         <div className='currentTime'></div>
       </div>

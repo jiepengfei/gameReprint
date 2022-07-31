@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.css'
+import './reset.css'
 
 export default function Index() {
   return (
