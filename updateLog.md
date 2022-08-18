@@ -13,7 +13,7 @@ eslint --init
 [规则解析](https://blog.csdn.net/henouren/article/details/77961753)
 
 四种标准的github地址：
-[Airbnb](https://github.com/airbnb/javascriptStandard)
+[Airbnb](https://github.com/airbnb/javascriptStandard)[中文解析](https://developer.aliyun.com/article/908461#slide-2)
 [standard](https://github.com/standard/standard)
 [Google](https://github.com/google/eslint-config-google)
 [XO](https://github.com/xojs/eslint-config-xo)
