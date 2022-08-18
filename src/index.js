@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // 严格模式下useEffect会执行两次
   // <React.StrictMode>
-  <App />
+  <App />,
   // </React.StrictMode>
 );
 

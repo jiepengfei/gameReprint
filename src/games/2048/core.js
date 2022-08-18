@@ -33,7 +33,7 @@ export default class Core {
   };
 
   // #endregion
-  constructor() {
+  constructor () {
     // 初始化
     this.#eleArr = [
       [null, null, null, null],
@@ -62,7 +62,7 @@ export default class Core {
     const container = document.querySelector('.container');
     document.addEventListener('keyup', (e) => {
       this.onMove(e);
-    })
+    });
     for (let i = 0; i < 4; i++) {
       for (let j = 0; j < 4; j++) {
         const div = document.createElement('div');

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Core from './core';
 import './index.css';
 
-function InputTest() {
+function InputTest () {
   useEffect(() => {
     new Core();
     // const inputTest = document.createElement('input');
@@ -11,7 +11,7 @@ function InputTest() {
     // inputTest.onkeydown = (e) => {
     //   test.onMove(e);
     // };
-  }, [])
+  }, []);
   return (
     <div className='main'>
       <div className='head'>
@@ -30,7 +30,7 @@ function InputTest() {
         <div className='currentTime'></div>
       </div>
     </div>
-  )
+  );
 }
 
 export default InputTest;

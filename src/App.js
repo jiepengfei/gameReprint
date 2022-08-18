@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import { BrowserRouter, Navigate, Routes, Route } from 'react-router-dom';
 import routeList from './router';
 
-function App() {
+function App () {
   const routes = routeList.map((item) => {
     return <Route key={item.path} path={item.path} element={<item.component />} />;
   });
@@ -14,7 +14,7 @@ function App() {
         <Route path="*" element={<Navigate to="/" replace />}/>
       </Routes>
     </Suspense>
-  </BrowserRouter>
+  </BrowserRouter>;
 }
 
 export default App;

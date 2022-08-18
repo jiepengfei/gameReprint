@@ -14,7 +14,7 @@ const routeList = [
   {
     path: '/minesweeper',
     component: Minesweeper,
-  }
+  },
 ];
 
 export default routeList;
