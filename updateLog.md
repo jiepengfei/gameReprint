@@ -5,6 +5,8 @@ react版本： 18.2.0
 react-router版本： 6.3.0
 
 ### 添加Eslint规则
+npm install eslint --save-dev 或 npm install eslint --save -g
+eslint --init
 ![image](https://user-images.githubusercontent.com/92159727/185419840-33e7e847-0026-40a3-a999-809fa1fd6b08.png)
 
 采用了standrad标准
