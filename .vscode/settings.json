@@ -1,0 +1,15 @@
+{
+  "eslint.enable": true,
+  "eslint.run": "onSave",
+  "eslint.options": {
+    "extensions": [
+      ".js",
+      ".vue",
+      ".jsx",
+      ".tsx",
+    ]
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
