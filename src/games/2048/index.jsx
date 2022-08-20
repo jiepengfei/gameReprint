@@ -4,6 +4,7 @@ import './index.css';
 
 function InputTest () {
   useEffect(() => {
+    // eslint-disable-next-line no-new
     new Core();
     // const inputTest = document.createElement('input');
     // inputTest.style.width = '100px';
