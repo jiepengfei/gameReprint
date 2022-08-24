@@ -8,6 +8,10 @@
 你也可以使用ES2022语法，或是最新的CSS特性。
 使用Class实现面向对象风格或是使用函数式风格都是可以的。
 
+## 开始游戏
+
+## 参与项目
+
 ## 项目文件目录
 
 ```
@@ -39,3 +43,7 @@ gameReprint
 |____node_modules  依赖包
 
 ```
+
+## License
+
+Licensed under the [MIT](LICENSE.txt) license.
