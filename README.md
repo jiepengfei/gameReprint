@@ -46,4 +46,4 @@ gameReprint
 
 ## License
 
-Licensed under the [MIT](LICENSE.txt) license.
+Licensed under the [MIT](LICENSE) license.
