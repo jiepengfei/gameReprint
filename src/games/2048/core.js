@@ -29,7 +29,7 @@ export default class Core {
     256: 'DarkYellow',
     512: 'DarkBlue',
     1024: 'DarkGreen',
-    else: 'wihte',
+    else: 'DarkRed',
   };
 
   // #endregion
