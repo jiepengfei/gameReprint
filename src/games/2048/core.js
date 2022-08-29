@@ -1,5 +1,3 @@
-// const { createElement } = require('react');
-
 export default class Core {
   // #region 字段定义
   #score = 0; // 得分
@@ -88,7 +86,6 @@ export default class Core {
     this.#mergeArray = [...this.#removeZeroArray];
   };
 
-  // 记录当前map
   #recordMap = () => {
     for (let i = 0; i < 4; i++) {
       for (let j = 0; j < 4; j++) {
@@ -97,7 +94,6 @@ export default class Core {
     }
   };
 
-  // 对比map是否变化
   #compteIsMapChange = () => {
     for (let i = 0; i < 4; i++) {
       for (let j = 0; j < 4; j++) {
