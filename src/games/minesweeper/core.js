@@ -40,29 +40,18 @@ export default class Minesweeping {
 
   #countMineNum = () => {
     this.#mineArray.forEach((value) => {
-      if (value - this.#colunm > 0) this.#dataArray[value - this.#colunm] += 1; // up
-      if (value - this.#colunm > 0 && value % this.#colunm !== this.#colunm - 1) {
-        this.#dataArray[value - this.#colunm + 1] += 1;
-      } // upper right
-      if (value % this.#colunm !== this.#colunm - 1) this.#dataArray[value + 1] += 1; // right
-      if (
-        value % this.#colunm !== this.#colunm - 1 &&
-        value + this.#colunm < this.#dataArray.length
-      ) {
-        this.#dataArray[value + this.#colunm + 1] += 1;
-      } // low right
-      if (value + this.#colunm < this.#dataArray.length) {
-        this.#dataArray[value + this.#colunm] += 1;
-      } // down
-      if (value + this.#colunm < this.#dataArray.length && value % this.#colunm !== 0) {
-        this.#dataArray[value + this.#colunm - 1] += 1;
-      } // left lower
-      if (value % this.#colunm !== 0) this.#dataArray[value - 1] += 1; // left
-      if (
-        value - this.#colunm > 0 && value % this.#colunm !== 0
-      ) {
-        this.#dataArray[value - this.#colunm - 1] += 1;
-      } // upper left
+      const canUp = value - this.#colunm > 0;
+      const canRight = value % this.#colunm !== this.#colunm - 1;
+      const canDown = value + this.#colunm < this.#dataArray.length;
+      const canLeft = value % this.#colunm !== 0;
+      if (canUp) this.#dataArray[value - this.#colunm] += 1; // up
+      if (canUp && canRight) this.#dataArray[value - this.#colunm + 1] += 1; // upper right
+      if (canRight) this.#dataArray[value + 1] += 1; // right
+      if (canRight && canDown) { this.#dataArray[value + this.#colunm + 1] += 1; } // low right
+      if (canDown) this.#dataArray[value + this.#colunm] += 1; // down
+      if (canDown && canLeft) this.#dataArray[value + this.#colunm - 1] += 1; // left lower
+      if (canLeft) this.#dataArray[value - 1] += 1; // left
+      if (canUp && canLeft) this.#dataArray[value - this.#colunm - 1] += 1; // upper left
     });
   };
 
