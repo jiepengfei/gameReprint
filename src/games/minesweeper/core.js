@@ -88,25 +88,14 @@ export default class Minesweeping {
   #clickBlank = (num) => {
     if (this.#temSet.has(num)) return;
     this.#temSet.add(num);
-    if ((num - this.#colunm) >= 0 && this.#dataArray[num - this.#colunm] === 0) {
-      this.#clickBlank(num - this.#colunm);
-    }
-    if (
-      (num + this.#colunm) < this.#colunm * this.#row &&
-      this.#dataArray[num + this.#colunm] === 0
-    ) {
-      this.#clickBlank(num + this.#colunm);
-    }
-    if (
-      (num - 1) >= 0 && (num - 1) % this.#colunm !== this.#colunm - 1 &&
-      this.#dataArray[num - 1] === 0
-    ) {
-      this.#clickBlank(num - 1);
-    }
-    if ((num + 1) < this.#colunm * this.#row && (num + 1) % this.#colunm !== 0 &&
-    this.#dataArray[num + 1] === 0) {
-      this.#clickBlank(num + 1);
-    }
+    if (num - this.#colunm >= 0) this.#nextCell(num - this.#colunm); // up
+    if (num + this.#colunm < this.#colunm * this.#row) this.#nextCell(num + this.#colunm); // down
+    if (num - 1 >= 0 && (num - 1) % this.#colunm !== this.#colunm - 1) this.#nextCell(num - 1); // left
+    if ((num + 1) % this.#colunm !== 0) this.#nextCell(num + 1); // right
+  };
+  
+  #nextCell = (nextNum) => {
+      this.#dataArray[nextNum] === 0 && this.#clickBlank(nextNum);
   };
 
   #render = () => {
