@@ -9,7 +9,6 @@ const Minesweeper = () => {
     newGame.clickEvent(Number(num));
   };
   useEffect(() => {
-    // eslint-disable-next-line no-unused-vars
     initNewGame(new Minesweeping(10, 10));
   }, []);
 

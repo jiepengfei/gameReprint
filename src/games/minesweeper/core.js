@@ -90,12 +90,13 @@ export default class Minesweeping {
     this.#temSet.add(num);
     if (num - this.#colunm >= 0) this.#nextCell(num - this.#colunm); // up
     if (num + this.#colunm < this.#colunm * this.#row) this.#nextCell(num + this.#colunm); // down
+    // eslint-disable-next-line max-len
     if (num - 1 >= 0 && (num - 1) % this.#colunm !== this.#colunm - 1) this.#nextCell(num - 1); // left
     if ((num + 1) % this.#colunm !== 0) this.#nextCell(num + 1); // right
   };
-  
+
   #nextCell = (nextNum) => {
-      this.#dataArray[nextNum] === 0 && this.#clickBlank(nextNum);
+    this.#dataArray[nextNum] === 0 && this.#clickBlank(nextNum);
   };
 
   #render = () => {
